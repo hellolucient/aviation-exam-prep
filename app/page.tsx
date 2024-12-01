@@ -25,7 +25,7 @@ export default function LandingPage() {
           Be The Moose
         </h1>
         
-        <div className="relative w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] mx-auto -ml-[50px] sm:ml-[365px] cursor-pointer" onClick={() => router.push('/tests')}>
+        <div className="relative w-[425px] h-[425px] sm:w-[600px] sm:h-[600px] mx-auto -ml-[75px] sm:ml-[365px] cursor-pointer" onClick={() => router.push('/tests')}>
           <Image
             src="/images/moose.png"
             alt="Cartoon Moose"

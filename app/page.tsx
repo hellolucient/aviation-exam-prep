@@ -20,12 +20,12 @@ export default function LandingPage() {
         <div className="absolute inset-0 bg-black/30" />
       </div>
 
-      <div className="relative z-10 h-full flex flex-col items-center pt-24">
-        <h1 className="text-8xl font-bold mb-16 text-white drop-shadow-lg">
+      <div className="relative z-10 h-full flex flex-col items-center pt-12 sm:pt-24">
+        <h1 className="text-5xl sm:text-8xl font-bold mb-8 sm:mb-16 text-white drop-shadow-lg px-4 text-center">
           Be The Moose
         </h1>
         
-        <div className="relative w-[600px] h-[600px] mx-auto ml-[365px] cursor-pointer" onClick={() => router.push('/tests')}>
+        <div className="relative w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] mx-auto sm:ml-[365px] cursor-pointer" onClick={() => router.push('/tests')}>
           <Image
             src="/images/moose.png"
             alt="Cartoon Moose"
@@ -41,7 +41,7 @@ export default function LandingPage() {
             }}
           />
         </div>
-        <p className="mt-4 text-lg text-white/80 dark:text-gray-300 animate-bounce">
+        <p className="mt-4 text-base sm:text-lg text-white/80 dark:text-gray-300 animate-bounce px-4 text-center">
           Click the moose to begin
         </p>
       </div>

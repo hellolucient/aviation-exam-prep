@@ -1,14 +1,13 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { allExams, type Exam } from '../data/exams/index';
+import { allExams } from '../data/exams/index';
 import { type Question } from '../data/questionTypes';
 import QuestionCard from '../components/QuestionCard';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
 
 export default function KnowledgeTestPage() {
   const params = useParams();
-  const router = useRouter();
   const exam = allExams.find(e => e.id === params.id);
   
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -16,6 +15,14 @@ export default function KnowledgeTestPage() {
   const [examCompleted, setExamCompleted] = useState(false);
   const [timeLeft, setTimeLeft] = useState(40); // 40 seconds per question
   const [isShaking, setIsShaking] = useState(false);
+
+  const goToNextQuestion = () => {
+    if (currentQuestionIndex < exam.questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      setExamCompleted(true);
+    }
+  };
 
   useEffect(() => {
     if (exam) {
@@ -43,7 +50,7 @@ export default function KnowledgeTestPage() {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [currentQuestionIndex, examCompleted]);
+  }, [examCompleted, goToNextQuestion]);
 
   // Reset timer when moving to next question
   useEffect(() => {
@@ -69,14 +76,6 @@ export default function KnowledgeTestPage() {
       total: exam.questions.length,
       percentage: Math.round((correctAnswers / exam.questions.length) * 100)
     };
-  };
-
-  const goToNextQuestion = () => {
-    if (currentQuestionIndex < exam.questions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-    } else {
-      setExamCompleted(true);
-    }
   };
 
   const goToPreviousQuestion = () => {

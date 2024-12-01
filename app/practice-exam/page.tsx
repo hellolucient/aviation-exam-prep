@@ -1,8 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { type PracticeExam } from '../data/examTypes';
 import { allPracticeExams } from '../data/practice-exams';
 import QuestionCard from '../components/QuestionCard';
 
@@ -15,7 +14,6 @@ const formatTime = (seconds: number) => {
 
 export default function PracticeExamPage() {
   const params = useParams();
-  const router = useRouter();
   const exam = allPracticeExams.find(e => e.id === params.id);
   
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);

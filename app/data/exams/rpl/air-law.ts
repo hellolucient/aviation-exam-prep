@@ -1,5 +1,4 @@
 import { ExamLevel, SubjectArea, type Exam } from '../../examTypes';
-import { type MultipleChoiceQuestion } from '../../questionTypes';
 
 export const rplAirLawExam: Exam = {
   id: "rpl-al-001",

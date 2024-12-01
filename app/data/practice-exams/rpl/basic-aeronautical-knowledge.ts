@@ -1,5 +1,4 @@
 import { ExamLevel, SubjectArea, type PracticeExam } from '../../examTypes';
-import { type Question } from '../../questionTypes';
 
 export const rplBAKPracticeExam: PracticeExam = {
   id: "rpl-bak-practice-001",

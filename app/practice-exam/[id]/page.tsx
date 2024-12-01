@@ -1,10 +1,10 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { type PracticeExam, SubjectArea } from '@/data/examTypes';
 import { allPracticeExams } from '@/data/practice-exams';
-import QuestionCard from '@/components/QuestionCard';
+import Image from 'next/image';
 
 const formatTime = (seconds: number) => {
   const minutes = Math.floor(seconds / 60);
@@ -45,7 +45,6 @@ const getSubjectAreaResults = (exam: PracticeExam, answers: number[]) => {
 
 export default function PracticeExamPage() {
   const params = useParams();
-  const router = useRouter();
   const exam = allPracticeExams.find((e: PracticeExam) => e.id === params.id);
   
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -54,11 +53,21 @@ export default function PracticeExamPage() {
   const [examCompleted, setExamCompleted] = useState(false);
   const [timeRemaining, setTimeRemaining] = useState(0);
 
+  // Move goToNextQuestion before the useEffect that uses it
+  const goToNextQuestion = () => {
+    if (!exam) return;
+    if (currentQuestionIndex < exam.questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+    } else {
+      setExamCompleted(true);
+    }
+  };
+
   // Initialize exam
   useEffect(() => {
     if (exam) {
       setAnswers(new Array(exam.questions.length).fill(-1));
-      setTimeRemaining(exam.timeLimit * 60); // Convert minutes to seconds
+      setTimeRemaining(exam.timeLimit * 60);
     }
   }, [exam]);
 
@@ -69,7 +78,7 @@ export default function PracticeExamPage() {
     const timer = setInterval(() => {
       setTimeRemaining((prev) => {
         if (prev <= 1) {
-          setExamCompleted(true);
+          goToNextQuestion();
           return 0;
         }
         return prev - 1;
@@ -77,7 +86,7 @@ export default function PracticeExamPage() {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [examStarted, examCompleted]);
+  }, [examStarted, examCompleted, goToNextQuestion]);
 
   const handleAnswer = (selectedOption: number) => {
     const newAnswers = [...answers];
@@ -95,15 +104,6 @@ export default function PracticeExamPage() {
       total: exam.questions.length,
       percentage: Math.round((correctAnswers / exam.questions.length) * 100)
     };
-  };
-
-  const goToNextQuestion = () => {
-    if (!exam) return;
-    if (currentQuestionIndex < exam.questions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
-    } else {
-      setExamCompleted(true);
-    }
   };
 
   const goToPreviousQuestion = () => {
@@ -187,9 +187,11 @@ export default function PracticeExamPage() {
             <p className="text-lg mb-4">{exam.questions[currentQuestionIndex].text}</p>
             {exam.questions[currentQuestionIndex].image && (
               <div className="mb-4">
-                <img 
+                <Image 
                   src={exam.questions[currentQuestionIndex].image.src}
                   alt={exam.questions[currentQuestionIndex].image.alt}
+                  width={500}
+                  height={300}
                   className="mx-auto"
                 />
                 <p className="text-sm text-center text-gray-600 mt-2">
@@ -341,9 +343,11 @@ export default function PracticeExamPage() {
                     
                     {question.image && (
                       <div className="mb-4">
-                        <img 
+                        <Image 
                           src={question.image.src}
                           alt={question.image.alt}
+                          width={500}
+                          height={300}
                           className="mx-auto"
                         />
                       </div>

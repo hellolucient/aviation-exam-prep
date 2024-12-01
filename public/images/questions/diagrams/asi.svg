@@ -1,0 +1,24 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- ASI Face -->
+  <circle cx="150" cy="150" r="140" fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Speed Arcs -->
+  <path d="M 50 150 A 100 100 0 0 1 150 50" 
+        fill="none" stroke="green" stroke-width="15" opacity="0.3"/>
+  <path d="M 150 50 A 100 100 0 0 1 250 150" 
+        fill="none" stroke="yellow" stroke-width="15" opacity="0.3"/>
+  <path d="M 250 150 A 100 100 0 0 1 150 250" 
+        fill="none" stroke="red" stroke-width="15" opacity="0.3"/>
+  
+  <!-- Speed Numbers -->
+  <text x="60" y="100" font-size="16">40</text>
+  <text x="240" y="100" font-size="16">120</text>
+  <text x="150" y="270" font-size="16">80</text>
+  
+  <!-- Pointer -->
+  <line x1="150" y1="150" x2="150" y2="80" 
+        stroke="black" stroke-width="2" transform="rotate(45 150 150)"/>
+  
+  <!-- Center -->
+  <circle cx="150" cy="150" r="5" fill="black"/>
+</svg> 

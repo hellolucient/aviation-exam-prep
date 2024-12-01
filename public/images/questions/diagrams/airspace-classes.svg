@@ -1,0 +1,25 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f0f9ff"/>
+  
+  <!-- Class D Airspace (highlighted) -->
+  <path d="M50 50 L350 50 L350 250 L50 250 Z" 
+        fill="none" 
+        stroke="#0369a1" 
+        stroke-width="3" 
+        stroke-dasharray="5,5"
+        class="highlighted-area"/>
+  
+  <!-- Altitude Labels -->
+  <text x="360" y="60" font-size="12" fill="#0369a1">Surface</text>
+  <text x="360" y="240" font-size="12" fill="#0369a1">2500'</text>
+  
+  <!-- Airport Symbol -->
+  <circle cx="200" cy="150" r="10" fill="#0369a1"/>
+  <text x="220" y="155" font-size="14">YBBN</text>
+  <text x="220" y="170" font-size="12" fill="#666">(Brisbane)</text>
+  
+  <!-- Highlight overlay -->
+  <rect x="45" y="45" width="310" height="210" 
+        fill="#0369a1" fill-opacity="0.1"/>
+</svg> 

@@ -1,0 +1,25 @@
+<svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="500" height="400" fill="white"/>
+  
+  <!-- Engine Block -->
+  <rect x="150" y="100" width="200" height="200" fill="none" stroke="black" stroke-width="2"/>
+  
+  <!-- Magnetos -->
+  <circle cx="100" cy="150" r="20" fill="none" stroke="black" stroke-width="2"/>
+  <text x="90" y="155" font-size="10">L MAG</text>
+  <circle cx="100" cy="250" r="20" fill="none" stroke="black" stroke-width="2"/>
+  <text x="90" y="255" font-size="10">R MAG</text>
+  
+  <!-- Spark Plugs -->
+  <circle cx="200" cy="150" r="5" fill="black"/>
+  <circle cx="300" cy="150" r="5" fill="black"/>
+  <circle cx="200" cy="250" r="5" fill="black"/>
+  <circle cx="300" cy="250" r="5" fill="black"/>
+  
+  <!-- Connections -->
+  <path d="M120 150 L200 150" stroke="red" stroke-width="1"/>
+  <path d="M120 150 L300 250" stroke="red" stroke-width="1"/>
+  <path d="M120 250 L200 250" stroke="blue" stroke-width="1"/>
+  <path d="M120 250 L300 150" stroke="blue" stroke-width="1"/>
+</svg> 

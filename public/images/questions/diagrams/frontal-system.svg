@@ -1,0 +1,18 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Map Background -->
+  <rect width="600" height="400" fill="#f0f9ff"/>
+  
+  <!-- Cold Front -->
+  <path d="M100 200 L300 100" stroke="blue" stroke-width="3"/>
+  <path d="M120 190 L120 160 L100 190" fill="none" stroke="blue" stroke-width="3"/>
+  
+  <!-- Warm Front -->
+  <path d="M300 100 L500 150" stroke="red" stroke-width="3"/>
+  <circle cx="320" cy="105" r="5" fill="red"/>
+  <circle cx="360" cy="110" r="5" fill="red"/>
+  
+  <!-- Occluded Front -->
+  <path d="M300 100 L400 300" stroke="purple" stroke-width="3"/>
+  <path d="M320 120 L320 90 L300 120" fill="none" stroke="purple" stroke-width="3"/>
+  <circle cx="310" cy="110" r="5" fill="purple"/>
+</svg> 

@@ -1,0 +1,26 @@
+<svg width="400" height="500" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky Background -->
+  <rect width="400" height="500" fill="#b3e0ff"/>
+  
+  <!-- Cloud Base -->
+  <path d="M50 400 C100 380 300 380 350 400 L350 300 C300 280 100 280 50 300 Z" 
+        fill="white" stroke="#666" stroke-width="2"/>
+  
+  <!-- Cloud Tower -->
+  <path d="M100 300 C150 250 250 250 300 300 L300 150 C250 100 150 100 100 150 Z" 
+        fill="white" stroke="#666" stroke-width="2"/>
+  
+  <!-- Anvil Top -->
+  <path d="M50 150 L100 150 C150 100 250 100 300 150 L350 150 L350 100 L50 100 Z" 
+        fill="white" stroke="#666" stroke-width="2"/>
+  
+  <!-- Height Markers -->
+  <line x1="20" y1="400" x2="380" y2="400" stroke="#666" stroke-dasharray="5,5"/>
+  <text x="385" y="405" font-size="12">5,000ft</text>
+  
+  <line x1="20" y1="250" x2="380" y2="250" stroke="#666" stroke-dasharray="5,5"/>
+  <text x="385" y="255" font-size="12">20,000ft</text>
+  
+  <line x1="20" y1="100" x2="380" y2="100" stroke="#666" stroke-dasharray="5,5"/>
+  <text x="385" y="105" font-size="12">35,000ft</text>
+</svg> 

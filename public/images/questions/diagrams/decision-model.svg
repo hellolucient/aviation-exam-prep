@@ -1,0 +1,31 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- DECIDE Model -->
+  <circle cx="200" cy="200" r="180" fill="white" stroke="#333" stroke-width="2"/>
+  
+  <!-- Model Steps -->
+  <g transform="translate(200 200)">
+    <!-- Detect -->
+    <path d="M0 -160 A160 160 0 0 1 139 -80" fill="none" stroke="#333" stroke-width="2"/>
+    <text x="-40" y="-140" font-size="14">Detect</text>
+    
+    <!-- Estimate -->
+    <path d="M139 -80 A160 160 0 0 1 139 80" fill="none" stroke="#333" stroke-width="2"/>
+    <text x="100" y="0" font-size="14">Estimate</text>
+    
+    <!-- Choose -->
+    <path d="M139 80 A160 160 0 0 1 0 160" fill="none" stroke="#333" stroke-width="2"/>
+    <text x="60" y="120" font-size="14">Choose</text>
+    
+    <!-- Identify -->
+    <path d="M0 160 A160 160 0 0 1 -139 80" fill="none" stroke="#333" stroke-width="2"/>
+    <text x="-100" y="120" font-size="14">Identify</text>
+    
+    <!-- Do -->
+    <path d="M-139 80 A160 160 0 0 1 -139 -80" fill="none" stroke="#333" stroke-width="2"/>
+    <text x="-160" y="0" font-size="14">Do</text>
+    
+    <!-- Evaluate -->
+    <path d="M-139 -80 A160 160 0 0 1 0 -160" fill="none" stroke="#333" stroke-width="2"/>
+    <text x="-100" y="-120" font-size="14">Evaluate</text>
+  </g>
+</svg> 

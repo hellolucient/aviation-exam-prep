@@ -1,0 +1,23 @@
+<svg width="500" height="300" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="500" height="300" fill="white"/>
+  
+  <!-- Fuel Tanks -->
+  <rect x="50" y="50" width="100" height="50" fill="none" stroke="black" stroke-width="2"/>
+  <text x="75" y="80" font-size="12">Left Tank</text>
+  
+  <rect x="350" y="50" width="100" height="50" fill="none" stroke="black" stroke-width="2"/>
+  <text x="375" y="80" font-size="12">Right Tank</text>
+  
+  <!-- Fuel Lines -->
+  <path d="M100 100 L100 150 L250 150" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M400 100 L400 150 L250 150" stroke="black" stroke-width="2" fill="none"/>
+  
+  <!-- Selector Valve -->
+  <circle cx="250" cy="150" r="20" fill="none" stroke="black" stroke-width="2"/>
+  <path d="M250 130 L250 170" stroke="black" stroke-width="2"/>
+  
+  <!-- Engine -->
+  <rect x="200" y="200" width="100" height="50" fill="none" stroke="black" stroke-width="2"/>
+  <text x="225" y="230" font-size="12">Engine</text>
+</svg> 

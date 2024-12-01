@@ -1,0 +1,22 @@
+<svg width="500" height="300" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="500" height="300" fill="#f0f9ff"/>
+  
+  <!-- Cold Front Symbol -->
+  <path d="M50 150 L450 150" stroke="blue" stroke-width="3"/>
+  <path d="M100 150 L100 120 L80 150 M200 150 L200 120 L180 150 M300 150 L300 120 L280 150" 
+        fill="none" stroke="blue" stroke-width="3"/>
+  
+  <!-- Cold Air Mass -->
+  <text x="100" y="200" fill="blue" font-size="14">Cold Air Mass</text>
+  <text x="100" y="220" fill="blue" font-size="12">Temperature: 15°C</text>
+  
+  <!-- Warm Air Mass -->
+  <text x="300" y="100" fill="red" font-size="14">Warm Air Mass</text>
+  <text x="300" y="120" fill="red" font-size="12">Temperature: 25°C</text>
+  
+  <!-- Movement Arrow -->
+  <path d="M400 50 L450 50 L440 40 M450 50 L440 60" 
+        fill="none" stroke="black" stroke-width="2"/>
+  <text x="360" y="45" font-size="12">Movement</text>
+</svg> 

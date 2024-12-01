@@ -1,0 +1,9 @@
+<svg width="600" height="100" viewBox="0 0 600 100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="100" fill="white"/>
+  <text x="10" y="40" font-family="monospace" font-size="14">
+    YSSY 191100Z 1912/2012 16015G25KT 9999 FEW030 SCT045
+  </text>
+  <text x="10" y="70" font-family="monospace" font-size="14">
+    FM192300 14012KT 9999 SCT030 PROB30
+  </text>
+</svg> 

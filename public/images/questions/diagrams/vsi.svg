@@ -1,0 +1,19 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- VSI Face -->
+  <circle cx="150" cy="150" r="140" fill="white" stroke="black" stroke-width="2"/>
+  
+  <!-- Scale Markings -->
+  <text x="150" y="50" text-anchor="middle">UP</text>
+  <text x="150" y="250" text-anchor="middle">DOWN</text>
+  
+  <!-- Numbers -->
+  <text x="150" y="80" text-anchor="middle">2</text>
+  <text x="150" y="220" text-anchor="middle">2</text>
+  
+  <!-- Pointer -->
+  <line x1="150" y1="150" x2="150" y2="90" 
+        stroke="black" stroke-width="2" transform="rotate(45 150 150)"/>
+  
+  <!-- Center -->
+  <circle cx="150" cy="150" r="5" fill="black"/>
+</svg> 

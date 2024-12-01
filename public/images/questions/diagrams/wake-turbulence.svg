@@ -1,0 +1,20 @@
+<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="300" fill="#f0f9ff"/>
+  
+  <!-- Runway -->
+  <rect x="50" y="150" width="500" height="50" fill="#666"/>
+  
+  <!-- Wake Vortices -->
+  <path d="M300 100 C350 120 400 80 450 100" 
+        fill="none" stroke="red" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M300 200 C350 180 400 220 450 200" 
+        fill="none" stroke="red" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Aircraft -->
+  <path d="M250 150 L300 150 L275 130 Z" fill="black"/>
+  
+  <!-- Labels -->
+  <text x="400" y="90" font-size="12" fill="red">Wake Vortex</text>
+  <text x="100" y="230" font-size="12">Touchdown Point</text>
+</svg> 

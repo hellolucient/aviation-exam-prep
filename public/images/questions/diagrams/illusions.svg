@@ -1,0 +1,21 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky and Ground -->
+  <rect width="400" height="150" fill="#b3e0ff"/>
+  <rect y="150" width="400" height="150" fill="#a0522d"/>
+  
+  <!-- Sloping Runway -->
+  <path d="M50 180 L350 120 L350 180 L50 240 Z" 
+        fill="#666" stroke="white" stroke-width="2"/>
+  
+  <!-- Aircraft Symbol -->
+  <path d="M180 100 L220 100 L200 80 Z" 
+        fill="black" stroke="none"/>
+  
+  <!-- Approach Path -->
+  <line x1="50" y1="80" x2="350" y2="120" 
+        stroke="red" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Labels -->
+  <text x="20" y="95" font-size="12">Correct</text>
+  <text x="20" y="120" font-size="12">Approach</text>
+</svg> 

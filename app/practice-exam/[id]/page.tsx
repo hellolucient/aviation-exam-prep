@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
@@ -141,7 +142,7 @@ export default function PracticeExamPage() {
                 </ul>
               </div>
               <div className="flex justify-between mt-8">
-                <Link href="/">
+                <Link href="/tests">
                   <button className="px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600">
                     Return Home
                   </button>
@@ -373,7 +374,7 @@ export default function PracticeExamPage() {
             </div>
 
             <div className="flex justify-center mt-8">
-              <Link href="/">
+              <Link href="/tests">
                 <button className="rounded-full bg-foreground text-background px-6 py-2 text-sm hover:bg-[#383838] dark:hover:bg-[#ccc]">
                   Return Home
                 </button>

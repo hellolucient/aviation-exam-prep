@@ -17,6 +17,7 @@ export default function KnowledgeTestPage() {
   const [isShaking, setIsShaking] = useState(false);
 
   const goToNextQuestion = () => {
+    if (!exam) return;
     if (currentQuestionIndex < exam.questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
